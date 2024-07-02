@@ -9,8 +9,11 @@
 body {
   background-color: #51509b;
 }
+i {
+  margin-right: 5px;
+}
 .container {
-  margin: 50px 160px;
+  margin: 50px 10px;
   padding: 0 15px 0 15px;
 }
 .boxs {
@@ -29,7 +32,6 @@ body {
   padding: 25px;
 }
 .boxs .in-box {
-  width: 300px;
   border-radius: 0px 10px 10px 0;
   position: absolute;
   top: 50%;
@@ -65,7 +67,7 @@ body {
 }
 .boxs .box ul li {
   padding: 12px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #dcdcdc;
   font-size: 14px;
 }
 .boxs .box p span {
@@ -99,4 +101,57 @@ body {
   position: absolute;
   font-size: 15px;
   left: -10px;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  .boxs {
+    flex-direction: column;
+  }
+  .box {
+    width: auto;
+  }
+
+  .boxs .in-box {
+    border-radius: 10px;
+    position: relative;
+    transform: translateY(-40px);
+  }
+  .h1-title {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .p-title {
+    font-size: 10px;
+  }
+  .title {
+    font-size: 16px;
+  }
+  .title span::after {
+    height: 4px;
+  }
+  .btn-shape {
+    padding: 5px 15px;
+  }
+  .price span {
+    font-size: 20px;
+  }
+  .price span small {
+    font-size: 9px;
+  }
 }
